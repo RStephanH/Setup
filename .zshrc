@@ -115,6 +115,7 @@ source $ZSH/oh-my-zsh.sh
 
 #export /opt into the path
 export PATH="$PATH:/opt/:/opt/nvim-linux64/bin/:/opt/lua-language-server-3.8.3-linux-x64/bin/:/opt/tor-browser/"
+export PATH_TO_FX="/opt/javafx-sdk-21.0.4/lib/"
 
 
 #function 
