@@ -126,10 +126,10 @@ go() {
     destination=$1
   fi 
   if [[ -d $destination ]]; then
-    cd $destination
+    cd $destination;ls -A
   else 
     mkdir -p $destination
-    cd $destination
+    cd $destination;ls -A
   fi
 }
 # case $TERM in
