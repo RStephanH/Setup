@@ -29,7 +29,7 @@ navigate () {
   browser=""
   if command -v brave-browser &> /dev/null; then 
     browser="brave-browser"
-  elif command -v brave-browser-beta &> dev/null; then
+  elif command -v brave-browser-beta &> /dev/null; then
     browser="brave-browser-beta"
     
   elif command -v firefox &> /dev/null; then
