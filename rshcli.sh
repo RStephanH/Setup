@@ -24,3 +24,23 @@ nxend() {
   locvpnfile=$3
   exegol start -p $hport --vpn $locvpnfile --desktop-config "vnc:127.0.0.1" 
 }
+#List of browsers
+navigate () {
+  browser=""
+  if command -v brave-browser &> /dev/null; then 
+    browser="brave-browser"
+  elif command -v brave-browser-beta &> dev/null; then
+    browser="brave-browser-beta"
+    
+  elif command -v firefox &> /dev/null; then
+    browser="firefox"
+  else
+    url=$1
+    xdg-open $url
+  fi
+
+  if [ -n "$browser" ]; then 
+
+    eval "$browser \"$1\""
+  fi
+}
