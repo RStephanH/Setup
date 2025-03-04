@@ -44,3 +44,11 @@ navigate () {
     eval "$browser \"$1\""
   fi
 }
+#down 
+down () {
+  yt-dlp $1
+}
+#-change drive--
+alias driveb='cd /mnt/hdd_512/'
+alias sett='setoolkit'
+alias bcap='sudo $HOME/go/bin/bettercap'
