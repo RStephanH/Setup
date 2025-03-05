@@ -1,9 +1,9 @@
 #!/bin/bash
 ##nvchad
 sudo pacman -S nvim 
-echo "Don't forget to launch the command :\
- ':MasonInstallAll'\
- ':TSInstall All'\
+echo "Don't forget to launch the command :\\
+ ':MasonInstallAll'\\
+ ':TSInstall All'\\
  ':Lazy sync'"
 sleep 4
 cd /mnt/hdd_512/archive/fonts/
