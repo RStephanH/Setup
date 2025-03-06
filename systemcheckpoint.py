@@ -2,10 +2,10 @@ import subprocess
 
 def launch_terminal_and_confirm():
     # Launch a terminal emulator (e.g., konsole, xterm, etc.)
-    terminal_command = ["konsole", " -e"]
+    terminal_command = ["konsole", "-e"]
 
     # Command to run in the terminal
-    command_to_run = ["bash", " -c", "echo 'Hello, World!'"]
+    command_to_run = ["bash", "-c", "./snapshot.sh; read -p 'Press enter to continue'"]
 
     # Combine the commands
     full_command = terminal_command + command_to_run
@@ -15,8 +15,11 @@ def launch_terminal_and_confirm():
     confirm = input("Do you want to run the 'Hello, World!' script? (yes/no): ").strip().lower()
 
     if confirm == 'yes':
-        # Launch the terminal with the command
-        subprocess.run(full_command)
+        try:
+            # Launch the terminal with the command
+            subprocess.run(full_command, check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"An error occurred: {e}")
     else:
         print("Operation cancelled.")
 
