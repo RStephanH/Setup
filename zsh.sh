@@ -26,15 +26,18 @@ trap cleanup INT
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     echo "editing .zshrc"
     touch ~/zshrc.mod
-    sed 's/ZSH_THEME/#&/' ~/.zshrc > ~/zshr.mod
+    sed 's/ZSH_THEME/#&/' ~/.zshrc > ~/zshrc.mod
     sed -i '/ZSH_THEME/a\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/zshrc.mod
     sed -i 's/plugins=(git/& sudo zsh-autosuggestions zsh-syntax-highlighting/' ~/zshrc.mod
     bat ~/zshrc.mod
     read -p "Is it correct ?(y/n)" confirm
     if [ $confirm=='y' ]; then
+      cd ~/
       mv .zshrc .zshrc.bak
-      mv 
+      mv zshrc.mod .zshrc
+    fi
+    echo "All is done. Now run source .zshrc"
 
   else
-    command ...
+    cleanup()
   fi
