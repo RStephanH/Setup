@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#func
+cleanup() {
+  echo "The script has been aborted"
+  exit 1
+}
+trap cleanup INT 
+  echo "This script gonna install zsh and personnalise it"
+  if [ !command -v bat ]; then
+    pacman -S bat
+  fi
+  sleep 1
+  read -p "Would you like to run the script (y/n)" confirm
+  if [ $confirm=='y' ]; then
+    echo -e "Let's get started!\n"
+    echo -e "Install zsh\n"
+    sudo pacman -S "zsh"
+    echo "Retreiving oh-my-zsh..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    echo "Cloning powerlevel10k, syntax-highlighting, autosuggestions"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    sleep 1
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    sleep 1
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    echo "editing .zshrc"
+    touch ~/zshrc.mod
+    sed 's/ZSH_THEME/#&/' ~/.zshrc > ~/zshr.mod
+    sed -i '/ZSH_THEME/a\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/zshrc.mod
+    sed -i 's/plugins=(git/& sudo zsh-autosuggestions zsh-syntax-highlighting/' ~/zshrc.mod
+    bat ~/zshrc.mod
+    read -p "Is it correct ?(y/n)" confirm
+    if [ $confirm=='y' ]; then
+      mv .zshrc .zshrc.bak
+      mv 
+
+  else
+    command ...
+  fi
