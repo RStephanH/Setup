@@ -32,8 +32,8 @@ navigate () {
   elif command -v brave-browser-beta &> /dev/null; then
     browser="brave-browser-beta"
     
-  elif command -v firefox &> /dev/null; then
-    browser="firefox"
+  elif command -v chromium &> /dev/null; then
+    browser="chromium"
   else
     url=$1
     xdg-open $url
