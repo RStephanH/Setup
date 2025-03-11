@@ -10,7 +10,7 @@ if [ -d "$DOCKER_DIR" ]; then
 
     # Define the JSON configuration
     CONFIG='{
-        "data-root": "/mnt/sdb2/docker/",
+        "data-root": "/mnt/hdd_512/docker/",
         "log-level": "info",
         "storage-driver": "overlay2"
     }'
