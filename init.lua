@@ -82,3 +82,5 @@ nvim_lsp.html.setup{
   }
 }
 
+nvim_lsp.bashls.setup{}
+

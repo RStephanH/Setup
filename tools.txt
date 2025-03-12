@@ -1,0 +1,10 @@
+lsp ("c/c++, python , html, css, js, cmake language")
+zapzap onlyoffice
+kden live
+discord
+exegol full 
+brave
+wireshark 
+qemu dependencies
+gns3 build
+virtualbox
