@@ -1,0 +1,5 @@
+#Begining of the personnal configuration
+ theme = catppuccin-frappe
+ background-opacity = 0.7
+ background-blur-radius = 20
+
