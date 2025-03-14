@@ -1,0 +1,25 @@
+
+# gatekeeper.conf
+palette = 0=#161716
+palette = 1=#FFB233
+palette = 2=#07E655
+palette = 3=#f08d53
+palette = 4=#31748f
+palette = 5=#957fb8
+palette = 6=#6392c5
+palette = 7=#b8c2cc
+palette = 8=#242524
+palette = 9=#FFB233
+palette = 10=#07E655
+palette = 11=#f2a272
+palette = 12=#85a8cb
+palette = 13=#c397d8
+palette = 14=#7083a7
+palette = 15=#d5d8da
+background = #090909
+foreground = #d8dee9
+cursor-color = #f08d53
+cursor-text = #d8dee9
+selection-background = #4c566a
+selection-foreground = #d8dee9
+
