@@ -10,7 +10,7 @@ if [ -d "$DOCKER_DIR" ]; then
 
     # Define the JSON configuration
     CONFIG='{
-        "data-root": "/mnt/hdd_512/docker/",
+        "data-root": "/mnt/docker/docker/",
         "log-level": "info",
         "storage-driver": "overlay2"
     }'
@@ -21,4 +21,19 @@ if [ -d "$DOCKER_DIR" ]; then
     echo "Docker daemon configuration updated."
 else
     echo "Docker directory does not exist."
+
+    sudo mkdir -p /etc/docker/
+    sudo chown $USER:$USER /mnt/docker
+    sudo touch "$CONFIG_FILE"
+    # Define the JSON configuration
+   
+    CONFIG='{
+        "data-root": "/mnt/docker/docker/",
+        "log-level": "info",
+        "storage-driver": "overlay2"
+    }'
+
+    # Write the configuration to the file
+    sudo bash -c "echo '$CONFIG' > $CONFIG_FILE"
+
 fi
