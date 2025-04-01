@@ -4,12 +4,12 @@ cleanup() {
   exit 1
 }
 trap cleanup INT
-dependecies=("qemu docker vpcs dynamips libvirt ubridge inetutils")
-gns3=("gns3-server gns3-gui")
+packages=("qemu" "docker" "vpcs" "dynamips" "libvirt" "ubridge" "inetutils")
+gns3=("gns3-server" "gns3-gui")
 echo "let's install the dependecies first"
-for dependecie in "${dependecies[@]}"; do
-  echo "Package=$dependecie"
-  yay -S "$dependecie"
+for package in "${packages[@]}"; do
+  echo  "Package= $package "
+  yay -S "$package"
   if [$? -eq 0]; then
     echo "$dependecie installed."
   fi
