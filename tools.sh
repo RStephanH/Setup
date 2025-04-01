@@ -4,7 +4,7 @@ cleanup() {
   exit 1
 }
 trap cleanup INT 
-  tools=("ghostty" "remmina" "obs-studio" "libvirtd" "qemu" "yakuake" "wireshark" "obsidian" "telegram-desktop" "thinderbird" "virtualbox" "cmake" "kernel-devel")
+  tools=("zsh" "vim" "github-cli" "ghostty" "remmina" "obs-studio" "yakuake" "wireshark-qt" "obsidian" "telegram-desktop" "thunderbird" "cmake" "kernel-devel")
   for tool in "${tools[@]}"; do
       sudo pacman -S $tool
       if [ $? -eq 0 ]; then
