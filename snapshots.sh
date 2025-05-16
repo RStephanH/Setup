@@ -1,3 +1,4 @@
+=======
 #!/usr/bin/bash
 
 cleanup() {
@@ -33,4 +34,5 @@ for yaytool in "${yaytools[@]}"; do
       yay -S --noconfirm "$tool"
     fi
   fi
+>>>>>>> main
 done
