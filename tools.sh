@@ -21,7 +21,10 @@ tools=(
   "telegram-desktop"
   "thunderbird"
   "cmake"
-  "kernel-devel"
+  "base-devel" 
+  "btop" 
+  "bat" 
+  "fx" 
 )
 
 echo "📦 Default tools to be installed:"
