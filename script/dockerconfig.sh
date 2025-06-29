@@ -2,6 +2,7 @@
 
 CONFIG_FILE="/etc/docker/daemon.json"
 DOCKER_DIR="/etc/docker/"
+DOCKER_MOUNT_POINT="/mnt/docker"
 
 # Check if the Docker directory exists
 if [ -d "$DOCKER_DIR" ]; then
@@ -23,7 +24,7 @@ else
     echo "Docker directory does not exist."
 
     sudo mkdir -p /etc/docker/
-    sudo chown $USER:$USER /mnt/docker
+    sudo chown $USER:$USER $DOCKER_MOUNT_POINT
     sudo touch "$CONFIG_FILE"
     # Define the JSON configuration
    
