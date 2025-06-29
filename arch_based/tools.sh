@@ -25,6 +25,9 @@ tools=(
   "btop" 
   "bat" 
   "fx" 
+  "virt-manager"
+  "virt-viewer"
+  "virtualbox"
 )
 
 echo "📦 Default tools to be installed:"
