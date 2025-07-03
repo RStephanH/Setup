@@ -10,11 +10,14 @@ trap cleanup INT
 # Compatible tools for Linux Mint via APT
 tools=(
   "zsh"
-  "vim"
+  "vim" 
+  "git"
   "gh"  # GitHub CLI
-  "remmina"
+  "remmina" 
+  "tmux" 
+  "nmap" 
   "obs-studio"
-  "wireshark-qt"
+  "wireshark"
   "telegram-desktop"
   "thunderbird"
   "cmake"
