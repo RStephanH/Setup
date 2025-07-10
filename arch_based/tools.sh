@@ -27,7 +27,8 @@ tools=(
   "fx" 
   "virt-manager"
   "virt-viewer"
-  "virtualbox"
+  "virtualbox" 
+  "hyprland"
 )
 
 echo "📦 Default tools to be installed:"
